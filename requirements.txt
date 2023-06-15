@@ -2,3 +2,4 @@ Pyrogram
 TgCrypto
 pySmartDL==1.3.4
 pyromod
+python-dotenv==0.19.1
