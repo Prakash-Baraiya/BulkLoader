@@ -1,4 +1,4 @@
-{
+English{
   "name": "BulkLoader",
   "description": "Telegram Bot to Download list of urls and Upload to Telegram.",
   "keywords": [
@@ -42,7 +42,7 @@
   "buildpacks": [{
     "url": "heroku/python"
   }],
-  "stack": "heroku-20",
+  "stack": "heroku-22",
   "formation": {
     "worker": {
       "quantity": 1,
