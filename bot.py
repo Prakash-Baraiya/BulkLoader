@@ -5,14 +5,18 @@ from urllib.error import HTTPError
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from pyrogram.errors import BadRequest
+from dotenv import load_dotenv
 
-# Configs
-API_HASH = os.environ['API_HASH'] # Api hash
-APP_ID = int(os.environ['APP_ID']) # Api id/App id
-BOT_TOKEN = os.environ['BOT_TOKEN'] # Bot token
-OWNER_ID = os.environ['OWNER_ID'] # Your telegram id
-AS_ZIP = bool(os.environ['AS_ZIP']) # Upload method. If True: will Zip all your files and send as zipfile | If False: will send file one by one
-BUTTONS = bool(os.environ['BUTTONS']) # Upload mode. If True: will send buttons (Zip or One by One) instead of AZ_ZIP | If False: will do as you've fill on AZ_ZIP
+load_dotenv()
+
+API_HASH = os.getenv('API_HASH') # Api hash
+APP_ID = int(os.getenv('APP_ID')) # Api id/App id
+BOT_TOKEN = os.getenv('BOT_TOKEN') # Bot token
+OWNER_ID = os.getenv('OWNER_ID') # Your telegram id
+AS_ZIP = bool(os.getenv('AS_ZIP')) # Upload method. If True: will Zip all your files and send as zipfile | If False: will send file one by one
+BUTTONS = bool(os.getenv('BUTTONS')) # Upload mode. If True: will send buttons (Zip or One by One) instead of AZ_ZIP | If False: will do as you've fill on AZ_ZIP
+
+If True: will send buttons (Zip or One by One) instead of AZ_ZIP | If False: will do as you've fill on AZ_ZIP
 
 # Buttons
 START_BUTTONS=[
